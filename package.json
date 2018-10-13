@@ -1,8 +1,8 @@
 {
   "name": "multi-react-select",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A multiselect component aiming to mimic the look and feel of bootstrap-multiselect",
-  "main": "lib/index.js",
+  "main": "dist/multi-react-select.js",
   "module": "dist/multi-react-select.js",
   "repository": "git@github.com:nathanharper/react-multiselect.git",
   "author": "Nathan Harper <nathan.sam.harper@gmail.com>",
@@ -10,8 +10,6 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
     "react-select": "^2.1.0"
   },
   "devDependencies": {
@@ -32,6 +30,8 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "webpack": "^4.20.2",
     "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.2",
@@ -39,10 +39,11 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/react-multiselect.js"
+      "path": "./dist/multi-react-select.js"
     }
   ],
   "scripts": {
-    "prettier": "prettier --write './src/**/*.{js,jsx,json,scss}'"
+    "prettier": "prettier --write './src/**/*.{js,jsx,json,scss}'",
+    "prepublish": "rm -rf ./dist && yarn webpack"
   }
 }
