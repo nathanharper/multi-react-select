@@ -1,0 +1,54 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["eslint-config-airbnb-es5", "prettier"],
+    "plugins": ["react", "prettier"],
+    "settings": {
+        "react": {
+            "version": "16.5.2"
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        "camelcase": "error",
+        "brace-style": ["error", "1tbs"],
+        "spaced-comment": "off",
+        "eqeqeq": [2, "smart"],
+        "no-eq-null": 0,
+        "func-names": "off",
+        "one-var": "off",
+        "space-before-function-paren": ["warn", "never"],
+        "consistent-return": "off",
+        "padded-blocks": "off",
+        "no-else-return": "off",
+        "dot-notation": "warn",
+        "no-param-reassign": "off",
+        "valid-jsdoc": "off",
+        "no-alert": "error",
+        "no-extra-bind": "error",
+        "react/no-unused-prop-types": "warn",
+        "react/no-multi-comp": "warn",
+        "react/jsx-wrap-multilines": 0,
+        "react/jsx-boolean-value": "off",
+        "react/jsx-no-bind": "off",
+        "react/jsx-no-duplicate-props": "warn",
+        "react/jsx-max-depth": [2, { "max": 8 }],
+        "react/boolean-prop-naming": "error",
+        "react/no-deprecated": "warn",
+        "react/no-direct-mutation-state": "error",
+        "react/no-find-dom-node": "error",
+        "react/no-is-mounted": "error",
+        "react/no-unsafe": "error",
+        "react/no-unused-state": "error",
+        "react/prop-types": ["error"],
+        "prettier/prettier": "warn"
+    }
+}
