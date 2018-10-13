@@ -7,8 +7,10 @@
   "author": "Nathan Harper <nathan.sam.harper@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-select": "^2.1.0"
   },
   "devDependencies": {
@@ -19,6 +21,8 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "bundlesize": "^0.17.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-es5": "^1.2.0",
     "eslint-config-prettier": "^3.1.0",
@@ -29,5 +33,10 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/react-multiselect.js"
+    }
+  ]
 }
