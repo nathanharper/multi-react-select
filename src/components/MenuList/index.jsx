@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { components } from 'react-select';
-import baseStyles from '../../styles/selectAll';
-import getSelectableOptions from '../../util/getSelectableOptions';
+import baseStyles from './styles';
+import getSelectableOptions from 'util/getSelectableOptions';
 
 export default class MenuList extends React.Component {
     static propTypes = {
@@ -46,18 +46,9 @@ export default class MenuList extends React.Component {
                 {!hideSelectAll && (
                     <div
                         onClick={this.onClick}
-                        style={
-                            styles && styles.selectAll
-                                ? styles.selectAll(baseStyles)
-                                : baseStyles
-                        }
+                        style={styles && styles.selectAll ? styles.selectAll(baseStyles) : baseStyles}
                     >
-                        <input
-                            type="checkbox"
-                            checked={this.allSelected()}
-                            readOnly
-                        />{' '}
-                        Select All
+                        <input type="checkbox" checked={this.allSelected()} readOnly /> Select All
                     </div>
                 )}
                 {this.props.children}

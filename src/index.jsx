@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import Select from 'react-select';
 import AsyncSelect from 'react-select/lib/Async';
 import { memoize, map, filter } from 'lodash';
-import Option from './lib/Option';
-import Group from './lib/Group';
-import MultiValueLabel from './lib/MultiValueLabel';
-import ValueContainer from './lib/ValueContainer';
-import MenuList from './lib/MenuList';
-import getSelectableOptions from './util/getSelectableOptions';
+import getSelectableOptions from 'util/getSelectableOptions';
+import { Option, Group, MultiValueLabel, ValueContainer, MenuList } from 'components';
 
 export default class ReactMultiSelect extends React.Component {
     static propTypes = {
@@ -61,8 +57,7 @@ export default class ReactMultiSelect extends React.Component {
 
         return (
             option.label.toLowerCase().indexOf(lowercaseFilter) >= 0 ||
-            (option.group &&
-                option.group.toLowerCase().indexOf(lowercaseFilter) >= 0)
+            (option.group && option.group.toLowerCase().indexOf(lowercaseFilter) >= 0)
         );
     }
 

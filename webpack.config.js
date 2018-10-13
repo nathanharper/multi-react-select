@@ -1,14 +1,29 @@
 const path = require('path');
+const commander = require('commander');
 
-// process.noDeprecation = true;
+commander
+    .version('0.1.0')
+    .option('--analyze', 'Display bundle analysis')
+    .parse(process.argv);
+
+const plugins = [];
+
+if (commander.analyze) {
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    plugins.push(
+        new BundleAnalyzerPlugin({
+            generateStatsFile: true,
+        })
+    );
+}
 
 module.exports = {
     mode: process.env.NODE_ENV,
     watch: true,
-    entry: './index.jsx',
+    entry: './src/index.jsx',
     output: {
         path: path.resolve(__dirname) + '/dist',
-        filename: 'react-multiselect.js',
+        filename: 'multi-react-select.js',
     },
     module: {
         rules: [
@@ -33,8 +48,9 @@ module.exports = {
         ],
     },
     devtool: 'cheap-module-eval-source-map',
+    plugins,
     resolve: {
-        modules: ['node_modules'],
+        modules: ['node_modules', 'src'],
         extensions: ['.js', '.jsx'],
     },
     optimization: {

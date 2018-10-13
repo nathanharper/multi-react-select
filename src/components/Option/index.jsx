@@ -10,12 +10,7 @@ export default class Option extends React.Component {
     render() {
         return (
             <components.Option {...this.props}>
-                <input
-                    type="checkbox"
-                    checked={this.props.isSelected}
-                    readOnly
-                />{' '}
-                {this.props.children}
+                <input type="checkbox" checked={this.props.isSelected} readOnly /> {this.props.children}
             </components.Option>
         );
     }
