@@ -13,3 +13,8 @@ This is essentially just react-select with a few custom components ro make it be
 
 ## Styling
 Styling works the same as it does in react-select with the added "selectAll" style key for styling the "Select All" option.
+
+## TODO
+
+* Remove lodash dependency
+* Build out the styling options
