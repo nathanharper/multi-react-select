@@ -2,23 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 import AsyncSelect from 'react-select/lib/Async';
-import { memoize,map,filter } from 'lodash';
+import { memoize, map, filter } from 'lodash';
 import Option from './lib/Option';
 import Group from './lib/Group';
 import MultiValueLabel from './lib/MultiValueLabel';
 import ValueContainer from './lib/ValueContainer';
 import MenuList from './lib/MenuList';
-import getSelectableOptions from './util/getSelectableOptions'
+import getSelectableOptions from './util/getSelectableOptions';
 
 export default class ReactMultiSelect extends React.Component {
     static propTypes = {
         isAsync: PropTypes.bool.isRequired,
         isBitfield: PropTypes.bool.isRequired,
+        hideSelectAll: PropTypes.bool.isRequired,
+        showGroupInValue: PropTypes.bool.isRequired,
+        displayMax: PropTypes.number,
     };
 
     static defaultProps = {
         isAsync: false,
         isBitfield: false,
+        hideSelectAll: false,
+        showGroupInValue: false,
+        displayMax: null,
     };
 
     constructor(props) {
