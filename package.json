@@ -1,5 +1,5 @@
 {
-  "name": "react-multiselect",
+  "name": "react-bootstrap-multi-select",
   "version": "1.0.0",
   "description": "A multiselect component aiming to mimic the look and feel of bootstrap-multiselect",
   "main": "index.jsx",
