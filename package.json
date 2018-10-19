@@ -1,6 +1,6 @@
 {
   "name": "multi-react-select",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A multiselect component aiming to mimic the look and feel of bootstrap-multiselect",
   "main": "dist/multi-react-select.js",
   "module": "dist/multi-react-select.js",
