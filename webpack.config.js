@@ -82,8 +82,14 @@ module.exports = {
         'react-select': {
             commonjs: 'react-select',
             commonjs2: 'react-select',
-            amd: 'ReactSelect',
-            root: 'ReactSelect',
+            amd: 'Select',
+            root: 'Select',
+        },
+        'react-select/lib/Async': {
+            commonjs: 'react-select/lib/Async',
+            commonjs2: 'react-select/lib/Async',
+            amd: 'AsyncSelect',
+            root: 'AsyncSelect',
         },
     },
 };
