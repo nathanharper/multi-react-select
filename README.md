@@ -1,7 +1,7 @@
-# react-multiselect
+# multi-react-select
 A multiselect component aiming to mimic the look and feel of bootstrap-multiselect
 
-This is essentially just react-select with a few custom components ro make it behave like a bootstrap-multiselect, so the API is the same, with a few additions.
+This is essentially just react-select with a few custom components to make it behave like a bootstrap-multiselect, so the API is the same, with a few additions.
 
 ## Props
 
